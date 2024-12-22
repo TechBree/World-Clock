@@ -17,4 +17,4 @@ function updateTime() {
 }
 
 updateTime();
-setInterval(updateLondonTime, 1000);
+setInterval(updateTime, 1000);
