@@ -31,8 +31,8 @@ function selectCity(event) {
   countryElement.innerHTML = `
    <div class="city">
           <div>
-            <div>${countryName}</div>
-            <div class="date">${countryTime.format("Do, MMMM YYYY")}</div>
+            <h2>${countryName}</h2>
+            <div class="date">${countryTime.format("dddd, Do MMMM YYYY")}</div>
           </div>
           <div class="timing">${countryTime.format(
             "h:mm:ss"
