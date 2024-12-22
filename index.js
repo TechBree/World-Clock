@@ -16,5 +16,29 @@ function updateTime() {
   parisTimeElement.innerHTML = pariscode.format("H:MM:SS [<small>]A[</small>]");
 }
 
+function selectCity(event) {
+  let countryName = countryTimezone.split("/")[1];
+  let countryTimezone = event.target.value;
+  if (countryTimezone === "current") {
+    countryTimezone = moment.tz.guess();
+  }
+  let countryTime = moment().tz(countryTimezone);
+  let countryElement = document.querySelector("#cities");
+  countryElement.innerHTML = `
+   <div class="city">
+          <div>
+            <div class="place">${countryName}</div>
+            <div class="date">${countryTime.format("Do, MMMM YYYY")}</div>
+          </div>
+          <div class="timing">${countryTime.format(
+            "H:MM:SS"
+          )}<small>${countryTime.format("A")}</small></div>
+        </div>
+  `;
+}
+
 updateTime();
 setInterval(updateTime, 1000);
+
+let countrySelectElement = document.querySelector("#country");
+countrySelectElement.addEventListener("change", selectCity);

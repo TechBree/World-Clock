@@ -11,27 +11,31 @@
   <body>
     <div class="container">
       <h1>World Clock</h1>
-      <select name="" id="">
+      <select id="country">
         <option value="">Choose a city</option>
-        <option value="london">London</option>
-        <option value="paris">Paris</option>
+        <option value="current">My current city</option>
+        <option value="Europe/Berlin">Belin</option>
+        <option value="Africa/Accra">Accra</option>
+        <option value="America/Dominica">Dominica</option>
       </select>
-      <div class="city" id="london">
-        <div>
-          <div class="place">London 🇬🇧</div>
-          <div class="date">Wednesday 11th December 2024</div>
+      <div id="cities">
+        <div class="city" id="london">
+          <div>
+            <div class="place">London 🇬🇧</div>
+            <div class="date">Wednesday 11th December 2024</div>
+          </div>
+          <div class="timing">20:30:45 <small>PM</small></div>
         </div>
-        <div class="timing">20:30:45 <small>PM</small></div>
-      </div>
-      <div class="lining"></div>
-      <div class="city" id="paris">
-        <div>
-          <div class="place">Paris 🇫🇷</div>
-          <div class="date">Wednesday 11th December 2024</div>
+        <div class="lining"></div>
+        <div class="city" id="paris">
+          <div>
+            <div class="place">Paris 🇫🇷</div>
+            <div class="date">Wednesday 11th December 2024</div>
+          </div>
+          <div class="timing">20:30:45 <small>PM</small></div>
         </div>
-        <div class="timing">20:30:45 <small>PM</small></div>
       </div>
-
+      <a href="/index.html">All cities</a>
       <footer>
         This project is created by Bridgit Kodohu, open source on
         <a href="https://github.com/TechBree/World-Clock" target="_blank"
